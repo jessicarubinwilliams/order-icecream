@@ -1,14 +1,14 @@
-# IceCream shop 
-#### Project to practice Object Oriented Javascript 
+# Online Ice Cream Ordering 
+#### Project to practice Object Oriented Javascript and Checkboxes
 #### Project initiated: 02-17-2021
-#### By Sofia Acosta and Jessica R Williams 
+#### By Sofia Acosta and Jessica R. Williams 
 ## Project Description
-  This project is to practice Object Oriented Javascript. The website is an ice-cream shop where you can pick flavor, size, cone and toppings to find the price. You can also create an order of several ice creams. 
+  This project is to practice Object Oriented Javascript. This is a web-based application for an ice-cream shop where the user may pick flavor, size, type of cone and toppings to find the price. The user may also create an order of several ice creams. 
 ## Specs
  
 ```
 Describe: IceCream()
-Test: "It will take four arguments and create Icecream instances with properties: flavor, size, cone, and toppings"
+Test: "It will take four arguments and create IceCream instances with properties: flavor, size, cone, and toppings"
 Expect(let iceCream = new IceCream(flavors, size, cone, toppings)).toEqual({flavors: [flavors], size: size, cone: cone, toppings: [toppings]});
 
 Describe: IceCream.prototype.price()
@@ -39,9 +39,9 @@ OR
 
 ## License
 * [MIT](https://choosealicense.com/licenses/mit)
-* Copyright 2021 Sofia Acosta
+* Copyright 2021 Sofia Acosta, Jessica R. Williams
 ## Contact
 Sofia Acosta sofiaacostarascon@gmail.com
-Jessica R Williams jessicarubinwilliams@gmail.com
+Jessica R. Williams jessicarubinwilliams@gmail.com
  
 
