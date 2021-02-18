@@ -1,0 +1,16 @@
+Create an IceCream Object ( flavor, size, cone, toppings,)
+Know what is the Icecream price (prototype method). 
+Create Order object (Multiple icecream orders)
+
+Icecream Object
+Properties: flavors-array, size, cone, toppings-array
+Methods: Price (maybe add methods for flavors and toppings--depends on what we learn about checkboxes)
+
+Order Object
+Properties: currentOrderId, {icecreams}
+Methods: Price, addIcecream
+Bonus Methods: findIcecream, deleteIcecream, editIcecream
+
+tier 1 flavors: strawberry, chocolate, vanilla
+tier 2 flavors: marionberry cheesecake, salted carmel ganache, tahitian vanilla bean
+tier 3 flavors: truffle honey, bluecheese pears, gold dust vanilla bean  
