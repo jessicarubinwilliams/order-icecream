@@ -12,9 +12,14 @@ Properties: currentOrderId, {icecreams}
 Methods: Price, addIcecream
 Bonus Methods: findIcecream, deleteIcecream, editIcecream
 
+FLAVOR TIERS
 tier 1 flavors: strawberry, chocolate, vanilla
 tier 2 flavors: marionberry cheesecake, salted carmel ganache, tahitian vanilla bean
 tier 3 flavors: truffle honey, bluecheese pears, gold dust vanilla bean
 
+CONE OPTIONS
+Regular cone (no price added)
+Waffle cone
+Chocolate dipped waffle cone 
 
 Sizes: kiddie, 1scoop, 2scoop, 3scoop
