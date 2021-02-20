@@ -12,15 +12,15 @@ IceCream.prototype.calculatePrice = function() {
   that.flavors.forEach(function(flavor) {
     if (flavor == "marionberry cheesecake" || flavor == "salted caramel ganache" || flavor == "tahitian vanilla bean") {
       that.price += 2.00
-    } else if (flavor == "truffle honey" || flavor == "bluecheese pears" || flavor == "gold dust vanilla bean") {
+    } if (flavor == "truffle honey" || flavor == "bluecheese pears" || flavor == "gold dust vanilla bean") {
       that.price += 3.00;
     }
   });
   if (this.cone == "waffle") {
     this.price += 2.00;
-  } else if (this.cone == "chocolate dipped") {
+  } if (this.cone == "chocolate dipped") {
     this.price += 3.00;
-  } else if (this.isKiddieCone == true) { //this portion of the logic works alone but does not work when combined with everything else
+  } if (this.isKiddieCone === true) { //this portion of the logic works alone but does not work when combined with everything else
     this.price /= 2;
   }
 }
