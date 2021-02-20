@@ -5,6 +5,7 @@ Create Order object (Multiple icecream orders)
 Icecream Object
 Properties: flavors-array, size, cone, toppings-array
 Methods: Price (maybe add methods for flavors and toppings--depends on what we learn about checkboxes)
+         Kids Cone ( chose between kids size and regular scoops)   
 
 Order Object
 Properties: currentOrderId, {icecreams}
