@@ -20,7 +20,7 @@ IceCream.prototype.calculatePrice = function() {
     this.price += 2.00;
   } if (this.cone == "chocolate dipped") {
     this.price += 3.00;
-  } if (this.isKiddieCone === true) { //this portion of the logic works alone but does not work when combined with everything else
+  } if (this.isKiddieCone === true) {
     this.price /= 2;
   }
 }
