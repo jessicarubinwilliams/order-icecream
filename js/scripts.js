@@ -1,4 +1,4 @@
-function IceCream (flavors, size, cone, toppings) {
+function IceCream (flavors, cone, toppings) {
 this.flavors = flavors;
 this.isKiddieCone = false; 
 this.cone = cone;
@@ -18,16 +18,19 @@ IceCream.prototype.calculatePrice = function() {
   });
   if (this.isKiddieCone == true) {
     this.price /= 2 }
+  i  
+
+
 }
 
 
 let flavors = ["marionberry cheesecake", "salted caramel ganache","tahitian vanilla bean", "truffle honey"];
 let toppings = ["chocolate chips", "nuts", "candy dots"];
-let iceCream = new IceCream(flavors, "small", "waffle", toppings);
+let iceCream = new IceCream(flavors, "waffle", toppings);
 iceCream.isKiddieCone = true;
 iceCream.calculatePrice();
 console.log(iceCream);
 
-// tier 1 flavors: strawberry, chocolate, vanilla
-// tier 2 flavors: marionberry cheesecake, salted carmel ganache, tahitian vanilla bean
-// tier 3 flavors: truffle honey, bluecheese pears, gold dust vanilla bean
+//Regular cone (no price added)
+//Waffle cone
+//Chocolate dipped waffle cone 
