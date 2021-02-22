@@ -25,13 +25,37 @@ IceCream.prototype.calculatePrice = function() {
   }
 }
 
+$(document).ready(function() {
+  $("#scoops-form").submit(function(event) {
+    event.preventDefault();
+    const numberOfScoopsString = $("#number-scoops").val();
+    const numberOfScoops = parseInt(numberOfScoopsString);
+    let flavorSelectionDiv = $("#flavor-selection")
+    let htmlForFlavorSelectionDiv = "";
+    //Loop that executes numberOfScoops times
+    for (let instance = 0; instance <= numberOfScoops; instance +=1) {
+      htmlForFlavorSelectionDiv += //PICK UP HERE!
+    }
 
-let flavors = ["marionberry cheesecake", "salted caramel ganache","tahitian vanilla bean", "truffle honey"];
-let toppings = ["chocolate chips", "nuts", "candy dots"];
-let iceCream = new IceCream(flavors, "chocolate dipped", toppings);
-iceCream.isKiddieCone = true;
-iceCream.calculatePrice();
-console.log(iceCream);
+
+
+
+    $("#order-form").show();
+    $("#scoops-form").hide();
+    
+  });
+});
+
+
+
+
+//Temporary UIL for testing BL
+// let flavors = ["marionberry cheesecake", "salted caramel ganache","tahitian vanilla bean", "truffle honey"];
+// let toppings = ["chocolate chips", "nuts", "candy dots"];
+// let iceCream = new IceCream(flavors, "chocolate dipped", toppings);
+// iceCream.isKiddieCone = true;
+// iceCream.calculatePrice();
+// console.log(iceCream);
 
 // 5 cone
 // 2 marionberry cheesecake
