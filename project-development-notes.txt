@@ -23,3 +23,12 @@ Waffle cone
 Chocolate dipped waffle cone 
 
 Sizes: kiddie, 1scoop, 2scoop, 3scoop
+
+USER INTERFACE
+How many scoops would you like?
+Drop down a list of flavors
+
+each scoop can be one flavor
+button: add another scoop 
+
+
