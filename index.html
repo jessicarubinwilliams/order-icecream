@@ -1,10 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>Ice Cream Shop</title>
 </head>
+
 <body>
-  
+  <div class="container">
+    <h1>Welcome to the our Ice Cream Shop</h1>
+    <form id="scoops-form">
+      <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="number-scoops">Select number of scoops</label>
+          <select class="custom-select mr-sm-2" id="number-scoops">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <div id="personalize-cone">
+      <form id="order-form">
+        <div id="flavor-selection">
+
+        </div>
+        <div class="form-group">
+          <label for="cone-choices">Select Your Cone</label>
+          <select class="form-control" id="cone-selection">
+            <option>Kidde Cone (entire order half size and half price)</option>
+            <option>Sugar Cone (no additional charge)</option>
+            <option>Waffle Cone (add $2.00)</option>
+            <option>Chocolate Dipped Waffle Cone (add $3.00)</option>
+          </select>
+        </div>
+        <div class="form-group" id="toppings-form">
+          <input type="checkbox" name="toppings" value="chocolate chips"> Chocolate chips<br>
+          <input type="checkbox" name="toppings" value="almonds"> Almonds<br>
+          <input type="checkbox" name="toppings" value="candy dots"> Candy dots<br>
+          <input type="checkbox" name="toppings" value="seasonal fruits"> Seasonal fruits<br>
+          <input type="checkbox" name="toppings" value="squinkles">Squinkles<br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Order</button>
+      </form>
+    </div>
+    <div id="confirmation-order">
+
+    </div>
+  </div>
 </body>
+
 </html>
