@@ -1,4 +1,6 @@
 function IceCream () {
+  this.isKiddieCone = false;
+  this.price = 5.00;
 }
 
 // IceCream.prototype.addProperty= function(name, value) {
@@ -97,7 +99,7 @@ $(document).ready(function() {
     const numberOfScoopsString = $("#number-scoops").val();
     const numberOfScoops = parseInt(numberOfScoopsString);
     displayFlavorChoices(numberOfScoops);
-    iceCream.addScoops(numberOfScoops)
+    iceCream.addScoops(numberOfScoops);
     $("#personalize-cone").show();
     $("#scoops-form").hide();
     console.log(iceCream);
