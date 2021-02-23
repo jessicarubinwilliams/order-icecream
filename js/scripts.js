@@ -125,6 +125,7 @@ $(document).ready(function() {
         return flavorChoices.push($(this).val());
       });
     }
+    //START BACK UP HERE: STILL NEED TO COLLECT USER INPUT FOR CONE & TOPPINGS
     console.log(flavorChoices);
     iceCream.addFlavors(flavorChoices);
   }); 
