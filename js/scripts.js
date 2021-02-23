@@ -88,16 +88,19 @@ $(document).ready(function() {
     const numberOfScoops = parseInt(numberOfScoopsString);
     displayFlavorChoices(numberOfScoops);
     $("#personalize-cone").show();
-    $("#scoops-form").hide();  
+    $("#scoops-form").hide();
   });
   $("#order-form").submit (function(event) {
     event.preventDefault();
-    const flavorChoices = [] 
-    $("input:radio[name=flavor]:checked").each(function(){
-      // const flavor = $(this).val();
-      // flavorChoices.push(flavor);
-      return flavorChoices.push($(this).val());
-    });
+    const flavorChoices = []
+    for (let instance = 1; instance <= numberOfScoops; instance +=1) {
+      flavor = "flavor" + instance;
+      $("input:radio[name=" + flavor + "]:checked").each(function(){
+        // const flavor = $(this).val();
+        // flavorChoices.push(flavor);
+        return flavorChoices.push($(this).val());
+      });
+    }
     console.log(flavorChoices)
   }); 
 });
