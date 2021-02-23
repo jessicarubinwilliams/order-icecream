@@ -8,12 +8,20 @@
  
 ```
 Describe: IceCream()
-Test: "It will take four arguments and create IceCream instances with properties: flavor, size, cone, and toppings"
-Expect(let iceCream = new IceCream(flavors, size, cone, toppings)).toEqual({flavors: [flavors], size: size, cone: cone, toppings: [toppings]});
+Test: "It will create IceCream instances with properties: isKiddieCone and price"
+Expect(let iceCream = new IceCream()).toEqual({ isKiddieCone: false, price: 5.00 });
+
+Describe: IceCream.prototype.addScoops()
+Test: "It will take a number as an argument and add the property key scoops with the value of the number argument"
+Expect(iceCream.addScoops(3)).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3 })
+
+Describe: IceCream.prototype.addFlavors(flavors)
+Test: "It will take an argument and add the property key flavors with the value of the argument"
+Expect(iceCream.addFlavors(["chocolate", "vanilla", "strawberry"])).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"] })
 
 Describe: IceCream.prototype.price()
 Test: "It will use branching logic to evaluate the properties of IceCream and determine the price"
-Expect(iceCream.price).toEqual({flavors: [flavors], size: size, cone: cone, toppings: [toppings], price: 7.50})
+Expect(iceCream.price).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"] })
  
 ```
  
