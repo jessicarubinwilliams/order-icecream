@@ -25,22 +25,73 @@ IceCream.prototype.calculatePrice = function() {
   }
 }
 
+  function displayFlavorChoices(numberOfScoops) {
+    let flavorSelectionDiv = $("#flavor-selection")
+    let htmlForFlavorSelectionDiv = "";
+    for (let instance = 1; instance <= numberOfScoops; instance +=1) {
+      htmlForFlavorSelectionDiv += `<p>Select flavor for scoop <span>` + instance + `</span></p>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='strawberry'> Strawberry
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='chocolate'> Chocolate
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='vanilla'> Vanilla
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='marionberry cheesecake'> Marrionberry cheesecake (add $2)
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='salted caramel ganache'> Salted caramel ganache (add $2)
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='tahitian vanilla bean'> Tahitian vanilla bean (add $2)
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='truffle honey'> Truffle honey (add $3)
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='bluecheese pears'> Bluecheese pears (add $3)
+        </label>
+      </div>
+      <div class='radio'>
+        <label>
+          <input type='radio' name='flavor' value='gold dust vanilla bean'> Gold dust vanilla bean (add $3)
+        </label>
+      </div>`
+    };
+    flavorSelectionDiv.html(htmlForFlavorSelectionDiv);
+  };
+
+
 $(document).ready(function() {
   $("#scoops-form").submit(function(event) {
     event.preventDefault();
+
     const numberOfScoopsString = $("#number-scoops").val();
     const numberOfScoops = parseInt(numberOfScoopsString);
-    let flavorSelectionDiv = $("#flavor-selection")
-    let htmlForFlavorSelectionDiv = "";
-    //Loop that executes numberOfScoops times
-    for (let instance = 0; instance <= numberOfScoops; instance +=1) {
-      htmlForFlavorSelectionDiv += //PICK UP HERE!
-    }
+    displayFlavorChoices(numberOfScoops);
 
 
 
 
-    $("#order-form").show();
+    $("#personalize-cone").show();
     $("#scoops-form").hide();
     
   });
