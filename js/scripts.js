@@ -1,9 +1,4 @@
-function IceCream (flavors, cone, toppings) {
-this.flavors = flavors;
-this.isKiddieCone = false; 
-this.cone = cone;
-this.toppings = toppings;
-this.price = 5.00;
+function IceCream () {
 }
 
 IceCream.prototype.calculatePrice = function() {
@@ -24,6 +19,9 @@ IceCream.prototype.calculatePrice = function() {
     this.price /= 2;
   }
 }
+
+// User Interface Logic -------
+let iceCream = new IceCream;
 
   function displayFlavorChoices(numberOfScoops) {
     let flavorSelectionDiv = $("#flavor-selection")
@@ -87,13 +85,15 @@ $(document).ready(function() {
     const numberOfScoopsString = $("#number-scoops").val();
     const numberOfScoops = parseInt(numberOfScoopsString);
     displayFlavorChoices(numberOfScoops);
+    iceCream.numberOfScoops = numberOfScoops;
     $("#personalize-cone").show();
     $("#scoops-form").hide();
+    console.log(iceCream);
   });
   $("#order-form").submit (function(event) {
     event.preventDefault();
     const flavorChoices = []
-    for (let instance = 1; instance <= numberOfScoops; instance +=1) {
+    for (let instance = 1; instance <= iceCream.numberOfScoops; instance +=1) {
       flavor = "flavor" + instance;
       $("input:radio[name=" + flavor + "]:checked").each(function(){
         // const flavor = $(this).val();
@@ -101,11 +101,15 @@ $(document).ready(function() {
         return flavorChoices.push($(this).val());
       });
     }
-    console.log(flavorChoices)
+    iceCream.flavors = flavorChoices;
   }); 
 });
 
-
+// IceCream Properties
+// this.isKiddieCone = false; 
+// this.cone = cone;
+// this.toppings = toppings;
+// this.price = 5.00;
 
 //Temporary UIL for testing BL
 // let flavors = ["marionberry cheesecake", "salted caramel ganache","tahitian vanilla bean", "truffle honey"];
