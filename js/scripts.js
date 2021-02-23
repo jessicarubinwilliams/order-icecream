@@ -32,47 +32,47 @@ IceCream.prototype.calculatePrice = function() {
       htmlForFlavorSelectionDiv += `<p>Select flavor for scoop <span>` + instance + `</span></p>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='strawberry'> Strawberry
+          <input type='radio' name='flavor` + instance + `' value='strawberry'> Strawberry
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='chocolate'> Chocolate
+          <input type='radio' name='flavor` + instance + `' value='chocolate'> Chocolate
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='vanilla'> Vanilla
+          <input type='radio' name='flavor` + instance + `' value='vanilla'> Vanilla
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='marionberry cheesecake'> Marrionberry cheesecake (add $2)
+          <input type='radio' name='flavor` + instance + `' value='marionberry cheesecake'> Marrionberry cheesecake (add $2)
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='salted caramel ganache'> Salted caramel ganache (add $2)
+          <input type='radio' name='flavor` + instance + `' value='salted caramel ganache'> Salted caramel ganache (add $2)
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='tahitian vanilla bean'> Tahitian vanilla bean (add $2)
+          <input type='radio' name='flavor` + instance + `' value='tahitian vanilla bean'> Tahitian vanilla bean (add $2)
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='truffle honey'> Truffle honey (add $3)
+          <input type='radio' name='flavor` + instance + `' value='truffle honey'> Truffle honey (add $3)
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='bluecheese pears'> Bluecheese pears (add $3)
+          <input type='radio' name='flavor` + instance + `' value='bluecheese pears'> Bluecheese pears (add $3)
         </label>
       </div>
       <div class='radio'>
         <label>
-          <input type='radio' name='flavor' value='gold dust vanilla bean'> Gold dust vanilla bean (add $3)
+          <input type='radio' name='flavor` + instance + `' value='gold dust vanilla bean'> Gold dust vanilla bean (add $3)
         </label>
       </div>`
     };
@@ -87,16 +87,20 @@ $(document).ready(function() {
     const numberOfScoopsString = $("#number-scoops").val();
     const numberOfScoops = parseInt(numberOfScoopsString);
     displayFlavorChoices(numberOfScoops);
-
-
-
-
     $("#personalize-cone").show();
-    $("#scoops-form").hide();
-    
+    $("#scoops-form").hide();  
   });
+  $("#order-form").submit (function(event) {
+    event.preventDefault();
+    const flavorChoices = [] 
+    $("input:radio[name=flavor]:checked").each(function(){
+      // const flavor = $(this).val();
+      // flavorChoices.push(flavor);
+      return flavorChoices.push($(this).val());
+    });
+    console.log(flavorChoices)
+  }); 
 });
-
 
 
 
