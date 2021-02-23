@@ -1,6 +1,18 @@
 function IceCream () {
 }
 
+// IceCream.prototype.addProperty= function(name, value) {
+//   this.name = value;
+// }
+
+IceCream.prototype.addScoops = function(number) {
+  this.scoops = number;
+}
+
+IceCream.prototype.addFlavors = function(flavors) {
+  this.flavors = flavors;
+}
+
 IceCream.prototype.calculatePrice = function() {
   this.price += this.toppings.length
   const that = this;
@@ -85,7 +97,7 @@ $(document).ready(function() {
     const numberOfScoopsString = $("#number-scoops").val();
     const numberOfScoops = parseInt(numberOfScoopsString);
     displayFlavorChoices(numberOfScoops);
-    iceCream.numberOfScoops = numberOfScoops;
+    iceCream.addScoops(numberOfScoops)
     $("#personalize-cone").show();
     $("#scoops-form").hide();
     console.log(iceCream);
@@ -93,7 +105,7 @@ $(document).ready(function() {
   $("#order-form").submit (function(event) {
     event.preventDefault();
     const flavorChoices = []
-    for (let instance = 1; instance <= iceCream.numberOfScoops; instance +=1) {
+    for (let instance = 1; instance <= iceCream.scoops; instance +=1) {
       flavor = "flavor" + instance;
       $("input:radio[name=" + flavor + "]:checked").each(function(){
         // const flavor = $(this).val();
@@ -101,7 +113,8 @@ $(document).ready(function() {
         return flavorChoices.push($(this).val());
       });
     }
-    iceCream.flavors = flavorChoices;
+    console.log(flavorChoices);
+    iceCream.addFlavors(flavorChoices);
   }); 
 });
 
