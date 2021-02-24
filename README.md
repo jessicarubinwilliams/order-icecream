@@ -30,7 +30,7 @@ Expect(iceCream.addToppings(["chocolate chips", "squinkles"])).toEqual({ isKiddi
 
 Describe: IceCream.prototype.calculatePrice()
 Test: "It will use branching logic to evaluate the properties of IceCream and determine the price"
-Expect(iceCream.calculatePrice).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone", flavors: ["chocolate chips", "squinkles"] })
+Expect(iceCream.calculatePrice).toEqual({ isKiddieCone: false, price: 7.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone", flavors: ["chocolate chips", "squinkles"] })
  
  
 ```
