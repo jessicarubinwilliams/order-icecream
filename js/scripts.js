@@ -118,10 +118,15 @@ $(document).ready(function() {
         return flavorChoices.push($(this).val());
       });
     }
-    
     iceCream.addFlavors(flavorChoices);
     const coneChoice = $("#cone-selection").val();
     iceCream.addCone(coneChoice);
+
+    const toppingChoice = []
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      return toppingChoice.push($(this).val());
+    });
+    console.log(toppingChoice)
   }); 
 });
 
