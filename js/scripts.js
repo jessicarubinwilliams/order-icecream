@@ -130,6 +130,8 @@ $(document).ready(function() {
     $("input:checkbox[name=toppings]:checked").each(function() {
       return toppingChoice.push($(this).val());
     });
+    iceCream.addToppings(toppingChoice);
+    iceCream.calculatePrice();
   }); 
 });
 
