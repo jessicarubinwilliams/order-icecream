@@ -126,38 +126,6 @@ $(document).ready(function() {
     $("input:checkbox[name=toppings]:checked").each(function() {
       return toppingChoice.push($(this).val());
     });
-    console.log(toppingChoice)
   }); 
 });
-
-// IceCream Properties
-// this.isKiddieCone = false; 
-// this.cone = cone;
-// this.toppings = toppings;
-// this.price = 5.00;
-
-//Temporary UIL for testing BL
-// let flavors = ["marionberry cheesecake", "salted caramel ganache","tahitian vanilla bean", "truffle honey"];
-// let toppings = ["chocolate chips", "nuts", "candy dots"];
-// let iceCream = new IceCream(flavors, "chocolate dipped", toppings);
-// iceCream.isKiddieCone = true;
-// iceCream.calculatePrice();
-// console.log(iceCream);
-
-// 5 cone
-// 2 marionberry cheesecake
-// 2 salted carmel ganache
-// 2 tahitian vanilla bean
-// 3 truffle honey
-// 1 chocolate chips
-// 1 nuts
-// 1 candy dots
-// 3 chocolate dipped cone
-// /2 isKiddieCone
-
-//Regular cone (no price added)
-//Waffle cone
-//Chocolate dipped waffle cone 
-
-// Get input from cone and toppings
 
