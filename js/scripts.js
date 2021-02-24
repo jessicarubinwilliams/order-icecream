@@ -107,7 +107,6 @@ let iceCream = new IceCream;
     orderConfirmationDiv.html(htmlForOrderConfirmation);
   }
 
-
 $(document).ready(function() {
   $("#scoops-form").submit(function(event) {
     event.preventDefault();
@@ -126,8 +125,6 @@ $(document).ready(function() {
     for (let instance = 1; instance <= iceCream.scoops; instance +=1) {
       flavor = "flavor" + instance;
       $("input:radio[name=" + flavor + "]:checked").each(function(){
-        // const flavor = $(this).val();
-        // flavorChoices.push(flavor);
         return flavorChoices.push($(this).val());
       });
     }
@@ -146,4 +143,3 @@ $(document).ready(function() {
     $("#order-confirmation").show();
   }); 
 });
-
