@@ -18,6 +18,10 @@ IceCream.prototype.addCone = function(cone) {
   }
 }
 
+IceCream.prototype.addToppings = function(toppings) {
+  this.toppings = toppings;
+}
+
 IceCream.prototype.calculatePrice = function() {
   this.price += this.toppings.length
   const that = this;
