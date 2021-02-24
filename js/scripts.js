@@ -132,6 +132,8 @@ $(document).ready(function() {
     });
     iceCream.addToppings(toppingChoice);
     iceCream.calculatePrice();
+    $("#personalize-cone").hide();
+    $("#order-confirmation").show();
   }); 
 });
 
