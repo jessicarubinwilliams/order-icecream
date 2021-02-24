@@ -16,12 +16,18 @@ Test: "It will take a number as an argument and add the property key scoops with
 Expect(iceCream.addScoops(3)).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3 })
 
 Describe: IceCream.prototype.addFlavors(flavors)
-Test: "It will take an argument and add the property key flavors with the value of the argument"
+Test: "It will take an argument and add the property key 'flavors' with the value of the argument"
 Expect(iceCream.addFlavors(["chocolate", "vanilla", "strawberry"])).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"] })
+
+Describe: IceCream.prototype.addCone(cone)
+Test: "It will take an argument and create a cone property key "cone" with the value of the argument and if the argument is 'kiddie-cone' then isKiddieCone property will be set to true"
+Expect(iceCream.addCone("kiddie cone")).toEqual({ isKiddieCone: true, price: 5.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "kiddie cone" }) 
+Expect(iceCream.addCone("sugar cone")).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone" })   
 
 Describe: IceCream.prototype.price()
 Test: "It will use branching logic to evaluate the properties of IceCream and determine the price"
-Expect(iceCream.price).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"] })
+Expect(iceCream.price).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone"  })
+ 
  
 ```
  
