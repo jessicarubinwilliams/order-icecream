@@ -1,6 +1,6 @@
 function IceCream () {
   this.isKiddieCone = false;
-  this.price = 5.00;
+  this.price = 5.00;  
 }
 
 IceCream.prototype.addScoops = function(number) {
@@ -9,6 +9,13 @@ IceCream.prototype.addScoops = function(number) {
 
 IceCream.prototype.addFlavors = function(flavors) {
   this.flavors = flavors;
+}
+
+IceCream.prototype.addCone = function(cone) {
+  this.cone = cone;
+  if (cone === "kiddie cone") {
+    this.isKiddieCone = true;
+  }
 }
 
 IceCream.prototype.calculatePrice = function() {
@@ -21,9 +28,9 @@ IceCream.prototype.calculatePrice = function() {
       that.price += 3.00;
     }
   });
-  if (this.cone === "waffle") {
+  if (this.cone === "waffle cone") {
     this.price += 2.00;
-  } if (this.cone === "chocolate dipped") {
+  } if (this.cone === "chocolate-dipped waffle cone") {
     this.price += 3.00;
   } if (this.isKiddieCone === true) {
     this.price /= 2;
@@ -111,9 +118,12 @@ $(document).ready(function() {
         return flavorChoices.push($(this).val());
       });
     }
-    //START BACK UP HERE: STILL NEED TO COLLECT USER INPUT FOR CONE & TOPPINGS
+    
     console.log(flavorChoices);
     iceCream.addFlavors(flavorChoices);
+    const coneChoice = $("#cone-selection").val();
+     
+
   }); 
 });
 
@@ -145,3 +155,6 @@ $(document).ready(function() {
 //Regular cone (no price added)
 //Waffle cone
 //Chocolate dipped waffle cone 
+
+// Get input from cone and toppings
+
