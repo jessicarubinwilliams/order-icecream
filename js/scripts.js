@@ -3,20 +3,6 @@ function IceCream () {
   this.price = 5.00;
 }
 
-// IceCream.prototype.addProperty = function(name, value) {
-//   this.name = value;
-// }
-
-// IceCream.prototype.addPropertyTakeTwo = function(name, value) {
-//   let key = "this." + name;
-//   key = value;
-//   console.log(key);
-// }
-
-// IceCream.prototype.addPropertyTakeThree = function(name, value) {
-//   "this." + name = value;
-// }
-
 IceCream.prototype.addScoops = function(number) {
   this.scoops = number;
 }
