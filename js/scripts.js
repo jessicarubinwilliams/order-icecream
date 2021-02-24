@@ -105,7 +105,7 @@ $(document).ready(function() {
     iceCream.addScoops(numberOfScoops);
     $("#personalize-cone").show();
     $("#scoops-form").hide();
-    console.log(iceCream);
+    
   });
   $("#order-form").submit (function(event) {
     event.preventDefault();
@@ -119,11 +119,9 @@ $(document).ready(function() {
       });
     }
     
-    console.log(flavorChoices);
     iceCream.addFlavors(flavorChoices);
     const coneChoice = $("#cone-selection").val();
-     
-
+    iceCream.addCone(coneChoice);
   }); 
 });
 
