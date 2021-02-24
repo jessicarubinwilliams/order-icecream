@@ -28,9 +28,9 @@ Describe: IceCream.prototype.addToppings(toppings)
 Test: "It will take an argument and add the property key 'toppings' with the value set equal to the argument"
 Expect(iceCream.addToppings(["chocolate chips", "squinkles"])).toEqual({ isKiddieCone: false, price: 5.00, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone", flavors: ["chocolate chips", "squinkles"] })
 
-Describe: IceCream.prototype.price()
+Describe: IceCream.prototype.calculatePrice()
 Test: "It will use branching logic to evaluate the properties of IceCream and determine the price"
-Expect(iceCream.price).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone", flavors: ["chocolate chips", "squinkles"] })
+Expect(iceCream.calculatePrice).toEqual({ isKiddieCone: false, price: 8.50, scoops: 3, flavors: ["chocolate", "vanilla", "strawberry"], cone: "sugar cone", flavors: ["chocolate chips", "squinkles"] })
  
  
 ```
