@@ -20,6 +20,9 @@ IceCream.prototype.addCone = function(cone) {
 
 IceCream.prototype.addToppings = function(toppings) {
   this.toppings = toppings;
+  if (this.toppings.length === 0) {
+    this.toppings = ["no toppings"];
+  }
 }
 
 IceCream.prototype.calculatePrice = function() {
@@ -98,6 +101,12 @@ let iceCream = new IceCream;
     flavorSelectionDiv.html(htmlForFlavorSelectionDiv);
   };
 
+  function displayOrderConfirmation(iceCreamToDisplay) {
+    let orderConfirmationDiv = $("#order-confirmation");
+    let htmlForOrderConfirmation = "<h5>Your " + iceCreamToDisplay.cone + " with " + iceCreamToDisplay.scoops + " scoops(s) of " + iceCreamToDisplay.flavors.join(", ") + " topped with " + iceCreamToDisplay.toppings.join(", ") + " will cost $" + iceCreamToDisplay.price + ".</h5>";
+    orderConfirmationDiv.html(htmlForOrderConfirmation);
+  }
+
 
 $(document).ready(function() {
   $("#scoops-form").submit(function(event) {
@@ -132,6 +141,7 @@ $(document).ready(function() {
     });
     iceCream.addToppings(toppingChoice);
     iceCream.calculatePrice();
+    displayOrderConfirmation(iceCream);
     $("#personalize-cone").hide();
     $("#order-confirmation").show();
   }); 
